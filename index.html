@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Selvi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="stars"></div>
+<div id="aurora"></div>
+<div id="petals"></div>
+<div id="hearts"></div>
+
+<audio id="bgmusic" loop>
+    <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<div id="app">
+
+<!-- PAGE 1 -->
+<section class="page active">
+    <div class="card intro">
+        <h1>For Selvi</h1>
+        <p>
+            Hi Selvi...<br>
+            Ada sesuatu yang pengen aku tunjukin ke kamu.<br>
+            Bukan sekadar website biasa.<br><br>
+            Tapi kumpulan perasaan yang belum sempat selesai.
+        </p>
+        <button onclick="nextPage()">Open</button>
+    </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+    <div class="card">
+        <h2>Kamu kangen aku ga?</h2>
+
+        <div class="btns">
+            <button onclick="nextPage()">Kangen</button>
+            <button id="runBtn">Engga</button>
+        </div>
+
+        <p id="funText"></p>
+    </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+    <div class="card">
+        <h2>Our Memories</h2>
+
+        <div class="carousel">
+            <img id="carouselImg" src="images/foto1.jpg">
+        </div>
+
+        <p id="memoryText">
+            Aku masih inget awal kita kenal rasanya 
+            kaya baru kemarin yah kita ngomongin diri kita
+            masing masing mulai dari warna kesukaan ,makanan kesukaan,
+            selera outft yang sama padahal vey pas awal kenal gbkl nyangka
+            kalo cerita kita vey yang akhirin juga kwkwkw
+        </p>
+
+        <button id="nextMemory">Next Memory</button>
+    </div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page">
+    <div class="card">
+        <video controls>
+            <source src="videos/video1.mp4">
+        </video>
+
+        <p>
+            Kalau bisa balik ke salah satu hari...
+            kamu mau ga?
+        </p>
+
+        <div class="btns">
+            <button onclick="nextPage()">Mau</button>
+            <button onclick="document.getElementById('answer').innerText='yaudah aku aja yang mau :('">Gak</button>
+        </div>
+
+        <p id="answer"></p>
+    </div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page">
+  <div class="card scrapbook">
+    <h2>Memory Album</h2>
+
+    <div class="album-wrapper">
+      <div class="album-3d" id="album3d">
+
+        <div class="heart-core-3d">❤️</div>
+
+        <div class="orbit orbit1">
+          <img class="orbit-photo" src="images/foto5.jpg">
+          <img class="orbit-photo" src="images/foto6.jpg">
+          <img class="orbit-photo" src="images/foto2.jpg">
+        </div>
+
+        <div class="orbit orbit2">
+          <img class="orbit-photo" src="images/foto8.jpg">
+          <img class="orbit-photo" src="images/foto9.jpg">
+          <img class="orbit-photo" src="images/foto10.jpg">
+        </div>
+
+      </div>
+    </div>
+
+    <button onclick="nextPage()">Continue</button>
+  </div>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page">
+    <div class="card">
+        <h2>Seberapa besar aku masih ada di hati kamu?</h2>
+
+        <input type="range" min="0" max="100" value="50" id="heartRange">
+
+        <div id="heart">❤️</div>
+
+        <button onclick="nextPage()">Next</button>
+    </div>
+</section>
+
+<!-- PAGE 7 -->
+<section class="page">
+  <div class="particles"></div>
+    <div class="card letter">
+
+        <div class="final-photo-frame">
+            <img src="images/foto11.jpg">
+            <span>Still my favorite person.</span>
+        </div>
+
+        <h2>Final Letter</h2>
+
+        <p>
+            "aku ikhlaskan jika memang bukan aku orangnya, tapi jangan pernah mikir kalau selama ini bukankamu orangnya"<br><br>
+
+            gamau merasa paling tersakiti, aku paham kamu lebih sakit dari aku, aku sakit karna kesalahanku sendiri, dan kamu sakit karna aku gagal menjadi seseorang yg baik untukmu, sehat sehat ya kalian maaf udah perah hadir di hidup kalia berdua semoga kalia berdua sehat sehat dede maafin om vey yah udah pernah hadir di hidup dede semoga nanti kalo dede udah besar bisa jagain mama bangain mama nenangin mama karna mama cuma punya dede vey percaya dede bisa jaga mama dan maaf vey gabisa ketemu dede lagi semoga dede baik baik aja yah seneng seneng ya dede dan tth semoga tth juga sehat sehat maaf ya vey pernah jahat sama kamu vey pernah janji gabakal ninggalin kamu tapi vey ga janji kalo ninggalin karna masalah tentang lawan jenis makasi buat kenangan kenangan nya first experient banget kamu banyak ngasih pelajaran yang bnyak vey blum pernah lakuin seandainya ada waktu yag bisa memutar balkan keadaan vey pengen jalanin itu sekali lagi dan gakan pernah bosen karna senyum vey ketawa vey nangisin kamu vey ga pernah palsu, sorry because hurt you too much I will not accept any of this.<br><br>
+
+            andai saja kamu tau betapa menangisnya aku ketika memutuskan untuk asing dan menjauh, padahal aku sangat ingin bersamamu<br><br>
+
+            — Feri
+        </p>
+
+        <button onclick="nextPage()">Answer Me</button>
+    </div>
+</section>
+
+<!-- PAGE 8 -->
+<section class="page">
+    <div class="card">
+        <h2>Did you ever love me the way I loved you?</h2>
+
+        <div class="btns">
+            <button onclick="alert('Thank you for everything, Selvi.')">Yes</button>
+            <button id="finalRun">No</button>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+const album = document.getElementById("album3d");
+
+let isDragging = false;
+let startX = 0;
+let rotateY = 0;
+let velocity = 0;
+let lastX = 0;
+
+// Drag start
+album.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startX = e.clientX;
+  lastX = e.clientX;
+  album.style.cursor = "grabbing";
+});
+
+// Drag move
+window.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+
+  let delta = e.clientX - lastX;
+  rotateY += delta * 0.5; // sensitivity
+  velocity = delta;
+
+  album.style.transform = `rotateY(${rotateY}deg)`;
+
+  lastX = e.clientX;
+});
+
+// Drag end (inertia)
+window.addEventListener("mouseup", () => {
+  isDragging = false;
+  album.style.cursor = "grab";
+
+  // efek “lemparan”
+  function inertia() {
+    if (Math.abs(velocity) < 0.1) return;
+
+    rotateY += velocity * 0.2;
+    velocity *= 0.95;
+
+    album.style.transform = `rotateY(${rotateY}deg)`;
+    requestAnimationFrame(inertia);
+  }
+
+  inertia();
+});
+</script>
+<script>
+window.addEventListener('click', () => {
+  document.getElementById('bgmusic').play();
+});
+</script>
+</body>
+</html>
